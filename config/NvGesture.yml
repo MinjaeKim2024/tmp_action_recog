@@ -1,0 +1,71 @@
+
+common:
+  data: /mnt/workspace/Dataset/NvGesture/ 
+  splits: /mnt/workspace/Dataset/NvGesture/dataset_splits/
+
+  #-------basic Hyparameter----------
+  visdom:
+    enable: False
+    visname: NvGesture
+
+  dataset: NvGesture #Database name e.g., NTU, THUREAD ...
+  batch_size: 4
+  test_batch_size: 2
+  num_workers: 10
+  learning_rate: 0.01
+  learning_rate_min: 0.00001
+  momentum: 0.9
+  weight_decay: 0.0003
+  init_epochs: 0
+  epochs: 100
+  report_freq: 10
+  optim: SGD
+  dist: True
+  vis_feature: True # Visualization?
+  DEBUG: False
+
+  scheduler:
+    name: cosin
+    patience: 4
+    warm_up_epochs: 3
+  loss:
+    name: CE
+    labelsmooth: True
+  MultiLoss: True
+  loss_lamdb: [ 1, 0.5, 0.5, 0.5 ]
+  distill: 1.
+model:
+  Network: I3DWTrans # e.g., I3DWTrans or FusionNet
+  pretrained: /mnt/workspace/Code/CVPR/Checkpoints/I3DWTrans-NvGesture-K-20221017-113943/model_best-Nv-K.pth.tar-v1
+  resumelr: False
+  sample_duration: 64
+  sample_size: 224
+  grad_clip: 5.
+  SYNC_BN: 1
+  w: 4 # 4 is best for Nv
+  temper: 0.4
+  recoupling: True
+  knn_attention: 0.7
+  sharpness: True
+  temp: [ 0.04, 0.07 ]
+  frp: True
+  SEHeads: 1
+  N: 6 # Number of Transformer Blocks
+  #-------Used for fusion network----------
+  rgb_checkpoint: '/mnt/workspace/Code/CVPR/Checkpoints/model_best-Nv-K.pth.tar'
+  depth_checkpoint: '/mnt/workspace/Code/CVPR/Checkpoints/model_best-Nv-M.pth.tar'
+
+dataset:
+  type: M
+  flip: 0.0
+  rotated: 0.5
+  angle: (-10, 10)
+  Blur: False
+  resize: (256, 256)
+  crop_size: 224
+  low_frames: 16
+  media_frames: 32
+  high_frames: 48
+
+# I3DWTrans-NvGesture-K-20221017-113943 90.83
+# I3DWTrans-NvGesture-M-20221018-123442 88.75

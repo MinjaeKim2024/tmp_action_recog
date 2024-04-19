@@ -1,0 +1,114 @@
+common:
+  data: /mnt/workspace//Dataset/THU-READ/frames
+  splits: /mnt/workspace//Dataset/THU-READ/dataset_splits/@2
+
+
+  #-------basic Hyparameter----------
+  visdom:
+    enable: False
+    visname: THU
+  dataset: THUREAD
+  batch_size: 6
+  test_batch_size: 6
+  num_workers: 6
+  learning_rate: 0.01
+  learning_rate_min: 0.00001
+  momentum: 0.9
+  weight_decay: 0.0003
+  init_epochs: 0
+  epochs: 100
+  report_freq: 10
+  optim: SGD
+  dist: True
+  vis_feature: True # Visualization?
+  DEBUG: False
+
+  scheduler:
+    name: cosin
+    patience: 4
+    warm_up_epochs: 3 # 10 may work
+  loss:
+    name: CE
+    labelsmooth: True
+  MultiLoss: True
+  loss_lamdb: [ 1, 0.5, 0.5, 0.5 ]
+  distill: 1.
+
+model:
+  Network: I3DWTrans # e.g., I3DWTrans or FusionNet
+  pretrained: '/mnt/workspace/Code/CVPR/Checkpoints/I3DWTrans-NvGesture-K-20221017-113943/model_best-Nv-K.pth.tar-v1' #'./Checkpoints/I3DWTrans-THUREAD-M-20211211-194730/model_best.pth.tar'
+  # resume: ./Checkpoints/FusionNet-THUREAD-M-20211213-195422/model_best.pth.tar
+  resumelr: False
+  sample_duration: 64
+  sample_size: 224
+  grad_clip: 5.
+  SYNC_BN: 1
+  w: 10
+  temper: 0.5
+  recoupling: True
+  knn_attention: 0.7
+  sharpness: True
+  temp: [ 0.04, 0.07 ]
+  frp: True
+  SEHeads: 1
+  N: 6 # Number of Transformer Blocks
+  
+  rgb_checkpoint: './Checkpoints/I3DWTrans-THUREAD-M-20211211-194730/model_best.pth.tar' 
+  depth_checkpoint: './Checkpoints/I3DWTrans-THUREAD-K-20211211-124150/model_best.pth.tar' 
+
+dataset:
+  type: M
+  flip: 0.5
+  rotated: 0.8
+  angle: (-45, 45)
+  Blur: False
+  resize: (320, 240)
+  crop_size: 200
+  low_frames: 16
+  media_frames: 32
+  high_frames: 48
+
+# I3DWTrans-THUREAD-K-20211212-122941 K 83.33
+# I3DWTrans-THUREAD-M-20211211-194730 M 82.08
+
+# Local + Global + multi loss I3DWTrans_SAtt-EXP-20210823-115604 55.0
+# THU-READPre I3DWTrans-EXP-20210825-000754 74.58
+# READPreonlyGlobal I3DWTrans-EXP-20210825-085754 72.08%
+# THU-READPreSingleLoss I3DWTrans-EXP-20210825-154036 72.50
+# READPreNew I3DWTrans-EXP-20210827-110508 75.00
+# THU-READPreNewTopKSche I3DWTrans-EXP-20210828-215011 75.83
+# THU-READPreNewTopKSche depth I3DWTrans-EXP-20210829-125851 80.0
+# THU-READPreNewTopKSchecross I3DWTrans-EXP-20210829-161637 77.08
+# THU-READPreCrossSche I3DWTrans-EXP-20210830-002827 74.58
+# THU-READPreCrossTopKSchegradclip 75.42
+# @2 THU-READDatt I3DWTrans-EXP-20210831-214258 77.92
+# THU-READDattSize(320, 320) I3DWTrans-EXP-20210901-014119 75.00 --> no work
+# THU-READDatt depth I3DWTrans-EXP-20210901-014025 79.58
+# THU-READDatt@4 I3DWTrans-EXP-20210901-092801 76.25
+# THU-READDatt@1Blur I3DWTrans-EXP-20210909-105432 74.17
+
+# THU-READDatt@1New M I3DWTrans-EXP-20210911-103936 80.00
+# THU-READDatt@1New K I3DWTrans-EXP-20210911-104131 75.42
+# Fusion add @1 84.17 | strategy 86.67
+# THU-READDatt@2New M I3DWTrans-EXP-20210910-224232 81.25
+# THU-READDatt@2New K I3DWTrans-EXP-20210910-223415 82.08
+# Fusion add @2 86.25 | strategy 90.41
+# THU-READDatt@3New M I3DWTrans-EXP-20210911-191641 77.50
+# THU-READDatt@3New K I3DWTrans-EXP-20210911-191748 77.92
+# Fusion add @3  | strategy 82.02
+# THU-READDatt@4New M I3DWTrans-EXP-20210912-005825 82.92
+# THU-READDatt@4New K I3DWTrans-EXP-20210912-101129 76.25
+# Fusion add @4  | strategy
+
+# @1 M  
+# @1 K  
+# fusion 85.42
+
+# @2 M  84.17 
+# @2 K  82.91
+# fusion 88.75
+
+# ./Checkpoints/FusionNet-EXP-20211008-232502/model_best.pth.tar
+# @3 M 81.94
+# @3 K 84.86
+# fusion 85.69

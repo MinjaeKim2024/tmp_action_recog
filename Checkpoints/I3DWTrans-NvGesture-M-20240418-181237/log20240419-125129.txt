@@ -1,0 +1,22 @@
+2024-04-19 12:51:31,409 gpu device = 0
+2024-04-19 12:51:31,409 Model:I3DWTrans, Total Categories:25
+2024-04-19 12:51:32,480 Dataset:NvGesture, Modality:rgb
+2024-04-19 12:51:32,481 Training Data Size is: 1329
+2024-04-19 12:51:32,481 Average Train Data frames are: 247, max frames: 972, min frames: 32
+2024-04-19 12:51:32,482 Dataset:NvGesture, Modality:rgb
+2024-04-19 12:51:32,482 Validation Data Size is: 549 
+2024-04-19 12:51:32,482 Average Train Data frames are: 252, max frames: 2202, min frames: 46
+2024-04-19 12:51:32,710 Start Epoch: 14, Learning rate: [0.009853741017638152], Best accuracy: 0.5155
+2024-04-19 12:51:32,713 param size = 38.142957MB
+2024-04-19 12:51:45,038 Epoch: 15/100	Mini-Batch: 00010/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 3.9852	CE_loss: 3.9852	Distil_loss: 0.0000	cosin_similar: 0.7898	Data_Time: 0.0604	Acc_1: 0.7000	Acc_2: 0.6000	Acc_3: 0.7000	Acc: 0.5000
+2024-04-19 12:51:49,269 Epoch: 15/100	Mini-Batch: 00020/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 4.0619	CE_loss: 4.0619	Distil_loss: 0.0000	cosin_similar: 0.8085	Data_Time: 0.0303	Acc_1: 0.6500	Acc_2: 0.6500	Acc_3: 0.7000	Acc: 0.6500
+2024-04-19 12:51:53,462 Epoch: 15/100	Mini-Batch: 00030/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 4.7548	CE_loss: 4.7548	Distil_loss: 0.0000	cosin_similar: 0.8167	Data_Time: 0.0203	Acc_1: 0.6333	Acc_2: 0.6000	Acc_3: 0.6333	Acc: 0.6333
+2024-04-19 12:51:57,644 Epoch: 15/100	Mini-Batch: 00040/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 4.7840	CE_loss: 4.7840	Distil_loss: 0.0000	cosin_similar: 0.8930	Data_Time: 0.0152	Acc_1: 0.6250	Acc_2: 0.6250	Acc_3: 0.6250	Acc: 0.6500
+2024-04-19 12:52:01,794 Epoch: 15/100	Mini-Batch: 00050/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 4.7962	CE_loss: 4.7962	Distil_loss: 0.0000	cosin_similar: 0.8670	Data_Time: 0.0122	Acc_1: 0.6000	Acc_2: 0.6200	Acc_3: 0.6200	Acc: 0.6400
+2024-04-19 12:52:05,976 Epoch: 15/100	Mini-Batch: 00060/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 5.0615	CE_loss: 5.0615	Distil_loss: 0.0000	cosin_similar: 0.8329	Data_Time: 0.0102	Acc_1: 0.5667	Acc_2: 0.5667	Acc_3: 0.6167	Acc: 0.5833
+2024-04-19 12:52:10,172 Epoch: 15/100	Mini-Batch: 00070/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 4.9380	CE_loss: 4.9380	Distil_loss: 0.0000	cosin_similar: 0.8438	Data_Time: 0.0088	Acc_1: 0.6000	Acc_2: 0.5857	Acc_3: 0.6143	Acc: 0.6143
+2024-04-19 12:52:14,348 Epoch: 15/100	Mini-Batch: 00080/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 5.0903	CE_loss: 5.0903	Distil_loss: 0.0000	cosin_similar: 0.8507	Data_Time: 0.0077	Acc_1: 0.5625	Acc_2: 0.5875	Acc_3: 0.6000	Acc: 0.6125
+2024-04-19 12:52:18,470 Epoch: 15/100	Mini-Batch: 00090/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 5.1607	CE_loss: 5.1607	Distil_loss: 0.0000	cosin_similar: 0.8588	Data_Time: 0.0068	Acc_1: 0.5556	Acc_2: 0.5778	Acc_3: 0.6000	Acc: 0.6111
+2024-04-19 12:52:22,653 Epoch: 15/100	Mini-Batch: 00100/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 5.2497	CE_loss: 5.2497	Distil_loss: 0.0000	cosin_similar: 0.8525	Data_Time: 0.0062	Acc_1: 0.5300	Acc_2: 0.5700	Acc_3: 0.5600	Acc: 0.5900
+2024-04-19 12:52:26,909 Epoch: 15/100	Mini-Batch: 00110/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 5.5715	CE_loss: 5.5715	Distil_loss: 0.0000	cosin_similar: 0.8431	Data_Time: 0.0056	Acc_1: 0.5091	Acc_2: 0.5455	Acc_3: 0.5364	Acc: 0.5636
+2024-04-19 12:52:31,073 Epoch: 15/100	Mini-Batch: 00120/01329	Lr: [[0.0098537, 0.009853741017638152]]	Total_loss: 5.5735	CE_loss: 5.5735	Distil_loss: 0.0000	cosin_similar: 0.8475	Data_Time: 0.0052	Acc_1: 0.5250	Acc_2: 0.5333	Acc_3: 0.5083	Acc: 0.5583
