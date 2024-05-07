@@ -27,6 +27,7 @@ parser.add_argument('--distill-lamdb', type=float, default=0.0, help='initial di
 parser.add_argument('--drop_path_prob', type=float, default=0.5, help='drop path probability')
 parser.add_argument('--save', type=str, default='Checkpoints', help='experiment dir')
 parser.add_argument('--seed', type=int, default=123, help='random seed')
+parser.add_argument('--epoch', type=int, default=50, help='random seed')
 args = parser.parse_args()
 args = Config(args)
 

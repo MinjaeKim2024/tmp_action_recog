@@ -93,7 +93,7 @@ def load_checkpoint(model, model_path, optimizer=None):
     bestacc = checkpoint['bestacc']
     return model, optimizer, epoch, bestacc
 
-def load_pretrained_checkpoint(model, model_path):
+def load_pretrained_checkpoint(model, model_path, phase='train'):
     # params = torch.load(model_path, map_location=lambda storage, loc: storage.cuda(local_rank))['model']
     params = torch.load(model_path, map_location='cpu')['model']
     new_state_dict = OrderedDict()

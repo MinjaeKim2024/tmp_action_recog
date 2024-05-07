@@ -1,8 +1,5 @@
 import cv2
 import os
-# target shape: '/home/minjae/ws/data/nvGesture/Video_data/rgb/class_01/subject1_r0/sk_color.avi/000002.jpg'
-import os
-import cv2
 
 def extract_frames(video_path, output_root):
     for class_folder in os.listdir(video_path):
@@ -123,7 +120,7 @@ def create_train_valid_split(data_root, train_ratio=0.7):
 
     
 file_path = '/home/minjae/ws/data/nvGesture'
-create_train_valid_split(file_path, train_ratio=0.7)
+create_train_valid_split(file_path, train_ratio=0.9)
 
 
 

@@ -124,7 +124,7 @@ class DSNNet(nn.Module):
             self.frp_module = FRP_Module(w=args.w, inplanes=64)
 
         if pretrained:
-            load_pretrained_checkpoint(self, pretrained)
+            load_pretrained_checkpoint(self, pretrained, args.phase)
 
     def build(self):
         for k in self.end_points.keys():

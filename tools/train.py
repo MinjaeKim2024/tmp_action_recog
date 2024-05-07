@@ -428,11 +428,11 @@ def infer(valid_queue, model, criterion, local_rank, epoch):
         end = time.time()
         inputs, target, heatmap = map(lambda x: x.cuda(local_rank, non_blocking=True), [inputs, target, heatmap])
 
-        (xs, xm, xl, logits), distillation_loss, feature = model(inputs, heatmap)
+        (logits, xs, xm, xl), distillation_loss, feature = model(inputs, heatmap)
         meter_dict['Infer_Time'].update((time.time() - end) / n)
         
-        if len(xs.size()) ==1:
-            xs = xs.unsqueeze(0)
+        if len(logits.size()) ==1:
+            logits = logits.unsqueeze(0)
         if args.MultiLoss:
             lamd1, lamd2, lamd3, lamd4 = map(float, args.loss_lamdb)
             globals()['CE_loss'] = lamd1 * CE(logits, target) + lamd2 * CE(xs, target) + lamd3 * CE(xm,
@@ -442,15 +442,14 @@ def infer(valid_queue, model, criterion, local_rank, epoch):
             globals()['CE_loss'] = CE(logits, target)
         globals()['Distil_loss'] = distillation_loss * args.distill_lamdb
         globals()['Total_loss'] = globals()['CE_loss'] + globals()['Distil_loss']
-
         grounds += target.cpu().tolist()
         preds += torch.argmax(logits, dim=1).cpu().tolist()
         v_paths += v_path
         #torch.distributed.barrier()
         globals()['Acc'] = calculate_accuracy(logits, target)
-        globals()['Acc_1'] = calculate_accuracy(xs+xm, target)
-        globals()['Acc_2'] = calculate_accuracy(xs+xl, target)
-        globals()['Acc_3'] = calculate_accuracy(xl+xm, target)
+        globals()['Acc_1'] = calculate_accuracy(xs, target)
+        globals()['Acc_2'] = calculate_accuracy(xm, target)
+        globals()['Acc_3'] = calculate_accuracy(xl, target)
 
         for name in meter_dict:
             if 'loss' in name:
