@@ -1,0 +1,1352 @@
+Experiment dir : Checkpoints/I3DWTrans-NvGesture-M-20240517-100420
+05/17 10:04:20 AM gpu device = 0
+05/17 10:04:20 AM Model:I3DWTrans, Total Categories:25
+pretrained:  /home/minjae/ws/MotionRGBD/Checkpoints/model_best-Nv-M.pth.tar-v1
+Missing keys:
+ ['dtn.mlp_head_small.1.weight', 'dtn.mlp_head_small.1.bias', 'dtn.mlp_head_media.1.weight', 'dtn.mlp_head_media.1.bias', 'dtn.mlp_head_large.1.weight', 'dtn.mlp_head_large.1.bias']
+phase:  train
+learnig rate:  0.005
+05/17 10:04:22 AM Dataset:NvGesture, Modality:rgb
+05/17 10:04:22 AM Training Data Size is: 1050
+05/17 10:04:22 AM Average Train Data frames are: 80, max frames: 80, min frames: 80
+05/17 10:04:22 AM Dataset:NvGesture, Modality:rgb
+05/17 10:04:22 AM Validation Data Size is: 482
+05/17 10:04:22 AM Average Train Data frames are: 80, max frames: 80, min frames: 80
+Namespace(config='config/NvGesture_init.yml', eval_only=False, local_rank=0, nprocs=1, save_grid_image=False, save_output=False, demo_dir='./demo', resume='', distill_lamdb=0.0, drop_path_prob=0.5, save='Checkpoints/I3DWTrans-NvGesture-M-20240517-100420', seed=123, data='/home/minjae/ws/data/nvGesture/Video_data/rgb', splits='/home/minjae/ws/data/nvGesture/Video_data/rgb', visdom={'enable': False, 'visname': 'NvGesture'}, dataset='NvGesture', batch_size=1, test_batch_size=1, num_workers=8, learning_rate=0.005, learning_rate_min=1e-05, momentum=0.9, weight_decay=0.0003, init_epochs=0, epochs=100, report_freq=100, optim='SGD', dist=False, vis_feature=True, DEBUG=False, scheduler={'name': 'cosin', 'patience': 4, 'warm_up_epochs': 3}, loss={'name': 'CE', 'labelsmooth': True}, MultiLoss=True, loss_lamdb=[1, 0.5, 0.5, 0.5], distill=1.0, Network='I3DWTrans', pretrained='/home/minjae/ws/MotionRGBD/Checkpoints/model_best-Nv-M.pth.tar-v1', resumelr=True, sample_duration=64, sample_size=224, grad_clip=5.0, SYNC_BN=1, w=4, temper=0.4, recoupling=True, knn_attention=0.7, sharpness=True, temp=[0.04, 0.07], frp=True, SEHeads=1, N=6, type='M', flip=0.0, rotated=0.5, angle='(-10, 10)', Blur=False, resize='(256, 256)', crop_size=224, low_frames=16, media_frames=32, high_frames=48, num_classes=25, phase='valid')
+05/17 10:04:22 AM param size = 38.142957MB
+05/17 10:15:04 AM Epoch: 1	Mini-Batch: 0001/0482	Total_loss: 8.1451	CE_loss: 8.1451	Distil_loss: 0.0000	cosin_similar: 0.3382	Acc_1: 0.0000	Acc_2: 0.0000	Acc_3: 0.0000	Acc: 0.0000	Infer_Time: 0.5493
+05/17 10:15:24 AM Epoch: 1	Mini-Batch: 0101/0482	Total_loss: 8.2190	CE_loss: 8.2190	Distil_loss: 0.0000	cosin_similar: 0.3513	Acc_1: 0.0099	Acc_2: 0.0099	Acc_3: 0.0198	Acc: 0.0198	Infer_Time: 0.1846
+05/17 10:15:43 AM Epoch: 1	Mini-Batch: 0201/0482	Total_loss: 8.4880	CE_loss: 8.4880	Distil_loss: 0.0000	cosin_similar: 0.3008	Acc_1: 0.0100	Acc_2: 0.0100	Acc_3: 0.0149	Acc: 0.0100	Infer_Time: 0.1839
+05/17 10:16:02 AM Epoch: 1	Mini-Batch: 0301/0482	Total_loss: 8.5155	CE_loss: 8.5155	Distil_loss: 0.0000	cosin_similar: 0.3463	Acc_1: 0.0299	Acc_2: 0.0465	Acc_3: 0.0133	Acc: 0.0133	Infer_Time: 0.1836
+05/17 10:16:22 AM Epoch: 1	Mini-Batch: 0401/0482	Total_loss: 8.7260	CE_loss: 8.7260	Distil_loss: 0.0000	cosin_similar: 0.3357	Acc_1: 0.0274	Acc_2: 0.0349	Acc_3: 0.0100	Acc: 0.0100	Infer_Time: 0.1840
+05/17 10:16:37 AM train_acc 0.023810
+05/17 10:16:37 AM valid_acc 0.058091, best_acc 0.058091
+--------------------------------------------
+Confusion Matrix
+--------------------------------------------
+Class 0 : 0
+Class 1 : 1
+Class 2 : 2
+Class 3 : 3
+Class 4 : 4
+Class 5 : 5
+Class 6 : 6
+Class 7 : 7
+Class 8 : 8
+Class 9 : 9
+Class 10 : 10
+Class 11 : 11
+Class 12 : 12
+Class 13 : 13
+Class 14 : 14
+Class 15 : 15
+Class 16 : 16
+Class 17 : 17
+Class 18 : 18
+Class 19 : 19
+Class 20 : 20
+Class 21 : 21
+Class 22 : 22
+Class 23 : 23
+Class 24 : 24
+================================================================================
+Accuracy Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 22 	 20.0 	 4.76 |
+| 21 	 16.67 	 50.0 |
+| 4 	 10.0 	 10.0 |
+| 14 	 6.25 	 3.85 |
+| 10 	 5.0 	 6.25 |
+| 0 	 0.0 	 0.0 |
+| 1 	 0.0 	 0.0 |
+| 2 	 0.0 	 0.0 |
+| 3 	 0.0 	 0.0 |
+| 5 	 0.0 	 0.0 |
+| 6 	 0.0 	 0.0 |
+| 7 	 0.0 	 0.0 |
+| 8 	 0.0 	 0.0 |
+| 9 	 0.0 	 0.0 |
+| 11 	 0.0 	 0.0 |
+| 12 	 0.0 	 0.0 |
+| 13 	 0.0 	 0.0 |
+| 15 	 0.0 	 0.0 |
+| 16 	 0.0 	 0.0 |
+| 17 	 0.0 	 0.0 |
+--------------------------------------------------------------------------------
+Precision Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 21 	 16.67 	 50.0 |
+| 4 	 10.0 	 10.0 |
+| 10 	 5.0 	 6.25 |
+| 22 	 20.0 	 4.76 |
+| 14 	 6.25 	 3.85 |
+| 3 	 0.0 	 0.0 |
+| 5 	 0.0 	 0.0 |
+| 12 	 0.0 	 0.0 |
+| 15 	 0.0 	 0.0 |
+| 16 	 0.0 	 0.0 |
+| 18 	 0.0 	 0.0 |
+| 19 	 0.0 	 0.0 |
+| 24 	 0.0 	 0.0 |
+| 0 	 0.0 	 0.0 |
+| 1 	 0.0 	 0.0 |
+| 2 	 0.0 	 0.0 |
+| 6 	 0.0 	 0.0 |
+| 7 	 0.0 	 0.0 |
+| 8 	 0.0 	 0.0 |
+| 9 	 0.0 	 0.0 |
+================================================================================
+05/17 10:27:18 AM Epoch: 2	Mini-Batch: 0001/0482	Total_loss: 1.6446	CE_loss: 1.6446	Distil_loss: 0.0000	cosin_similar: 2.3365	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.4856
+05/17 10:27:38 AM Epoch: 2	Mini-Batch: 0101/0482	Total_loss: 3.7788	CE_loss: 3.7788	Distil_loss: 0.0000	cosin_similar: 1.9143	Acc_1: 0.7525	Acc_2: 0.7030	Acc_3: 0.7426	Acc: 0.7327	Infer_Time: 0.2031
+05/17 10:27:58 AM Epoch: 2	Mini-Batch: 0201/0482	Total_loss: 3.4261	CE_loss: 3.4261	Distil_loss: 0.0000	cosin_similar: 1.9317	Acc_1: 0.7811	Acc_2: 0.7711	Acc_3: 0.7413	Acc: 0.7811	Infer_Time: 0.1964
+05/17 10:28:17 AM Epoch: 2	Mini-Batch: 0301/0482	Total_loss: 3.2453	CE_loss: 3.2453	Distil_loss: 0.0000	cosin_similar: 1.9935	Acc_1: 0.8040	Acc_2: 0.7940	Acc_3: 0.7841	Acc: 0.8073	Infer_Time: 0.1940
+05/17 10:28:38 AM Epoch: 2	Mini-Batch: 0401/0482	Total_loss: 3.2361	CE_loss: 3.2361	Distil_loss: 0.0000	cosin_similar: 2.0049	Acc_1: 0.8055	Acc_2: 0.7855	Acc_3: 0.7805	Acc: 0.8080	Infer_Time: 0.1939
+05/17 10:28:54 AM train_acc 0.946667
+05/17 10:28:54 AM valid_acc 0.825726, best_acc 0.825726
+--------------------------------------------
+Confusion Matrix
+--------------------------------------------
+Class 0 : 0
+Class 1 : 1
+Class 2 : 2
+Class 3 : 3
+Class 4 : 4
+Class 5 : 5
+Class 6 : 6
+Class 7 : 7
+Class 8 : 8
+Class 9 : 9
+Class 10 : 10
+Class 11 : 11
+Class 12 : 12
+Class 13 : 13
+Class 14 : 14
+Class 15 : 15
+Class 16 : 16
+Class 17 : 17
+Class 18 : 18
+Class 19 : 19
+Class 20 : 20
+Class 21 : 21
+Class 22 : 22
+Class 23 : 23
+Class 24 : 24
+================================================================================
+Accuracy Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 12 	 100.0 	 50.0 |
+| 15 	 100.0 	 86.36 |
+| 22 	 100.0 	 100.0 |
+| 19 	 95.24 	 83.33 |
+| 7 	 94.74 	 85.71 |
+| 11 	 94.74 	 66.67 |
+| 23 	 94.74 	 75.0 |
+| 5 	 90.0 	 94.74 |
+| 9 	 89.47 	 77.27 |
+| 21 	 88.89 	 88.89 |
+| 24 	 88.89 	 100.0 |
+| 2 	 85.0 	 85.0 |
+| 10 	 80.0 	 94.12 |
+| 13 	 80.0 	 72.73 |
+| 20 	 80.0 	 100.0 |
+| 3 	 76.19 	 64.0 |
+| 14 	 75.0 	 80.0 |
+| 17 	 73.68 	 100.0 |
+| 1 	 72.73 	 100.0 |
+| 8 	 72.73 	 84.21 |
+--------------------------------------------------------------------------------
+Precision Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 0 	 61.11 	 100.0 |
+| 1 	 72.73 	 100.0 |
+| 6 	 65.0 	 100.0 |
+| 17 	 73.68 	 100.0 |
+| 20 	 80.0 	 100.0 |
+| 22 	 100.0 	 100.0 |
+| 24 	 88.89 	 100.0 |
+| 5 	 90.0 	 94.74 |
+| 10 	 80.0 	 94.12 |
+| 4 	 70.0 	 93.33 |
+| 21 	 88.89 	 88.89 |
+| 18 	 68.42 	 86.67 |
+| 15 	 100.0 	 86.36 |
+| 7 	 94.74 	 85.71 |
+| 2 	 85.0 	 85.0 |
+| 8 	 72.73 	 84.21 |
+| 19 	 95.24 	 83.33 |
+| 14 	 75.0 	 80.0 |
+| 9 	 89.47 	 77.27 |
+| 23 	 94.74 	 75.0 |
+================================================================================
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+05/17 10:39:41 AM Epoch: 3	Mini-Batch: 0001/0482	Total_loss: 1.6508	CE_loss: 1.6420	Distil_loss: 0.0088	cosin_similar: 1.8318	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.2148
+05/17 10:40:00 AM Epoch: 3	Mini-Batch: 0101/0482	Total_loss: 3.7620	CE_loss: 3.7548	Distil_loss: 0.0071	cosin_similar: 1.6630	Acc_1: 0.6931	Acc_2: 0.7129	Acc_3: 0.7525	Acc: 0.7228	Infer_Time: 0.1922
+05/17 10:40:19 AM Epoch: 3	Mini-Batch: 0201/0482	Total_loss: 3.2447	CE_loss: 3.2361	Distil_loss: 0.0086	cosin_similar: 1.7297	Acc_1: 0.7463	Acc_2: 0.7811	Acc_3: 0.8010	Acc: 0.7910	Infer_Time: 0.1881
+05/17 10:40:39 AM Epoch: 3	Mini-Batch: 0301/0482	Total_loss: 3.1045	CE_loss: 3.0952	Distil_loss: 0.0093	cosin_similar: 1.7501	Acc_1: 0.7841	Acc_2: 0.8106	Acc_3: 0.8106	Acc: 0.8140	Infer_Time: 0.1868
+05/17 10:40:58 AM Epoch: 3	Mini-Batch: 0401/0482	Total_loss: 3.1345	CE_loss: 3.1247	Distil_loss: 0.0098	cosin_similar: 1.7811	Acc_1: 0.7905	Acc_2: 0.8105	Acc_3: 0.8105	Acc: 0.8155	Infer_Time: 0.1872
+05/17 10:41:14 AM train_acc 0.996190
+05/17 10:41:14 AM valid_acc 0.829876, best_acc 0.829876
+--------------------------------------------
+Confusion Matrix
+--------------------------------------------
+Class 0 : 0
+Class 1 : 1
+Class 2 : 2
+Class 3 : 3
+Class 4 : 4
+Class 5 : 5
+Class 6 : 6
+Class 7 : 7
+Class 8 : 8
+Class 9 : 9
+Class 10 : 10
+Class 11 : 11
+Class 12 : 12
+Class 13 : 13
+Class 14 : 14
+Class 15 : 15
+Class 16 : 16
+Class 17 : 17
+Class 18 : 18
+Class 19 : 19
+Class 20 : 20
+Class 21 : 21
+Class 22 : 22
+Class 23 : 23
+Class 24 : 24
+================================================================================
+Accuracy Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 11 	 100.0 	 90.48 |
+| 23 	 100.0 	 70.37 |
+| 19 	 95.24 	 95.24 |
+| 5 	 95.0 	 90.48 |
+| 16 	 95.0 	 59.38 |
+| 22 	 95.0 	 100.0 |
+| 7 	 94.74 	 94.74 |
+| 15 	 94.74 	 66.67 |
+| 4 	 90.0 	 78.26 |
+| 9 	 89.47 	 70.83 |
+| 24 	 88.89 	 94.12 |
+| 20 	 86.67 	 100.0 |
+| 6 	 85.0 	 94.44 |
+| 10 	 85.0 	 80.95 |
+| 12 	 83.33 	 68.18 |
+| 1 	 81.82 	 100.0 |
+| 14 	 81.25 	 81.25 |
+| 13 	 80.0 	 76.19 |
+| 17 	 78.95 	 93.75 |
+| 21 	 77.78 	 93.33 |
+--------------------------------------------------------------------------------
+Precision Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 0 	 66.67 	 100.0 |
+| 1 	 81.82 	 100.0 |
+| 2 	 75.0 	 100.0 |
+| 20 	 86.67 	 100.0 |
+| 22 	 95.0 	 100.0 |
+| 19 	 95.24 	 95.24 |
+| 7 	 94.74 	 94.74 |
+| 6 	 85.0 	 94.44 |
+| 24 	 88.89 	 94.12 |
+| 17 	 78.95 	 93.75 |
+| 21 	 77.78 	 93.33 |
+| 5 	 95.0 	 90.48 |
+| 11 	 100.0 	 90.48 |
+| 14 	 81.25 	 81.25 |
+| 10 	 85.0 	 80.95 |
+| 4 	 90.0 	 78.26 |
+| 8 	 63.64 	 77.78 |
+| 13 	 80.0 	 76.19 |
+| 18 	 47.37 	 75.0 |
+| 3 	 47.62 	 71.43 |
+================================================================================
+05/17 10:51:57 AM Epoch: 4	Mini-Batch: 0001/0482	Total_loss: 1.6150	CE_loss: 1.6030	Distil_loss: 0.0120	cosin_similar: 2.7622	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1538
+05/17 10:52:16 AM Epoch: 4	Mini-Batch: 0101/0482	Total_loss: 3.1188	CE_loss: 3.1114	Distil_loss: 0.0074	cosin_similar: 2.3621	Acc_1: 0.7624	Acc_2: 0.7624	Acc_3: 0.8020	Acc: 0.7921	Infer_Time: 0.1909
+05/17 10:52:36 AM Epoch: 4	Mini-Batch: 0201/0482	Total_loss: 3.0268	CE_loss: 3.0183	Distil_loss: 0.0085	cosin_similar: 2.4372	Acc_1: 0.7960	Acc_2: 0.7811	Acc_3: 0.8010	Acc: 0.8209	Infer_Time: 0.1868
+05/17 10:52:55 AM Epoch: 4	Mini-Batch: 0301/0482	Total_loss: 2.9535	CE_loss: 2.9440	Distil_loss: 0.0095	cosin_similar: 2.4823	Acc_1: 0.8106	Acc_2: 0.8007	Acc_3: 0.8173	Acc: 0.8339	Infer_Time: 0.1860
+05/17 10:53:15 AM Epoch: 4	Mini-Batch: 0401/0482	Total_loss: 2.9909	CE_loss: 2.9813	Distil_loss: 0.0096	cosin_similar: 2.4666	Acc_1: 0.8005	Acc_2: 0.7855	Acc_3: 0.8180	Acc: 0.8254	Infer_Time: 0.1865
+05/17 10:53:30 AM train_acc 0.998095
+05/17 10:53:30 AM valid_acc 0.838174, best_acc 0.838174
+--------------------------------------------
+Confusion Matrix
+--------------------------------------------
+Class 0 : 0
+Class 1 : 1
+Class 2 : 2
+Class 3 : 3
+Class 4 : 4
+Class 5 : 5
+Class 6 : 6
+Class 7 : 7
+Class 8 : 8
+Class 9 : 9
+Class 10 : 10
+Class 11 : 11
+Class 12 : 12
+Class 13 : 13
+Class 14 : 14
+Class 15 : 15
+Class 16 : 16
+Class 17 : 17
+Class 18 : 18
+Class 19 : 19
+Class 20 : 20
+Class 21 : 21
+Class 22 : 22
+Class 23 : 23
+Class 24 : 24
+================================================================================
+Accuracy Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 23 	 100.0 	 65.52 |
+| 5 	 95.0 	 95.0 |
+| 7 	 94.74 	 81.82 |
+| 11 	 94.74 	 81.82 |
+| 15 	 94.74 	 78.26 |
+| 20 	 93.33 	 100.0 |
+| 19 	 90.48 	 95.0 |
+| 10 	 90.0 	 78.26 |
+| 24 	 88.89 	 94.12 |
+| 1 	 86.36 	 100.0 |
+| 2 	 85.0 	 85.0 |
+| 6 	 85.0 	 100.0 |
+| 22 	 85.0 	 100.0 |
+| 9 	 84.21 	 80.0 |
+| 12 	 83.33 	 62.5 |
+| 21 	 83.33 	 100.0 |
+| 14 	 81.25 	 76.47 |
+| 13 	 80.0 	 76.19 |
+| 0 	 77.78 	 87.5 |
+| 4 	 75.0 	 83.33 |
+--------------------------------------------------------------------------------
+Precision Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 1 	 86.36 	 100.0 |
+| 6 	 85.0 	 100.0 |
+| 17 	 73.68 	 100.0 |
+| 20 	 93.33 	 100.0 |
+| 21 	 83.33 	 100.0 |
+| 22 	 85.0 	 100.0 |
+| 5 	 95.0 	 95.0 |
+| 19 	 90.48 	 95.0 |
+| 24 	 88.89 	 94.12 |
+| 18 	 73.68 	 93.33 |
+| 0 	 77.78 	 87.5 |
+| 2 	 85.0 	 85.0 |
+| 4 	 75.0 	 83.33 |
+| 8 	 63.64 	 82.35 |
+| 7 	 94.74 	 81.82 |
+| 11 	 94.74 	 81.82 |
+| 9 	 84.21 	 80.0 |
+| 10 	 90.0 	 78.26 |
+| 15 	 94.74 	 78.26 |
+| 14 	 81.25 	 76.47 |
+================================================================================
+05/17 11:04:14 AM Epoch: 5	Mini-Batch: 0001/0482	Total_loss: 1.5968	CE_loss: 1.5851	Distil_loss: 0.0117	cosin_similar: 2.7082	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1891
+05/17 11:04:33 AM Epoch: 5	Mini-Batch: 0101/0482	Total_loss: 3.4281	CE_loss: 3.4211	Distil_loss: 0.0070	cosin_similar: 2.4140	Acc_1: 0.7525	Acc_2: 0.7426	Acc_3: 0.7624	Acc: 0.7822	Infer_Time: 0.1921
+05/17 11:04:53 AM Epoch: 5	Mini-Batch: 0201/0482	Total_loss: 3.1049	CE_loss: 3.0966	Distil_loss: 0.0083	cosin_similar: 2.5009	Acc_1: 0.7711	Acc_2: 0.7811	Acc_3: 0.7811	Acc: 0.8010	Infer_Time: 0.1873
+05/17 11:05:12 AM Epoch: 5	Mini-Batch: 0301/0482	Total_loss: 2.9886	CE_loss: 2.9795	Distil_loss: 0.0092	cosin_similar: 2.5461	Acc_1: 0.7940	Acc_2: 0.8073	Acc_3: 0.8106	Acc: 0.8206	Infer_Time: 0.1862
+05/17 11:05:31 AM Epoch: 5	Mini-Batch: 0401/0482	Total_loss: 2.9702	CE_loss: 2.9609	Distil_loss: 0.0093	cosin_similar: 2.5598	Acc_1: 0.7980	Acc_2: 0.8105	Acc_3: 0.8155	Acc: 0.8204	Infer_Time: 0.1856
+05/17 11:05:47 AM train_acc 1.000000
+05/17 11:05:47 AM valid_acc 0.834025, best_acc 0.838174
+05/17 11:16:29 AM Epoch: 6	Mini-Batch: 0001/0482	Total_loss: 1.6643	CE_loss: 1.6531	Distil_loss: 0.0112	cosin_similar: 2.7531	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 0.3027
+05/17 11:16:49 AM Epoch: 6	Mini-Batch: 0101/0482	Total_loss: 3.3951	CE_loss: 3.3884	Distil_loss: 0.0067	cosin_similar: 2.3932	Acc_1: 0.7426	Acc_2: 0.7525	Acc_3: 0.8218	Acc: 0.7525	Infer_Time: 0.1834
+05/17 11:17:08 AM Epoch: 6	Mini-Batch: 0201/0482	Total_loss: 3.1372	CE_loss: 3.1292	Distil_loss: 0.0080	cosin_similar: 2.4935	Acc_1: 0.7761	Acc_2: 0.7910	Acc_3: 0.8159	Acc: 0.8010	Infer_Time: 0.1834
+05/17 11:17:27 AM Epoch: 6	Mini-Batch: 0301/0482	Total_loss: 3.0010	CE_loss: 2.9920	Distil_loss: 0.0090	cosin_similar: 2.5470	Acc_1: 0.8007	Acc_2: 0.8173	Acc_3: 0.8372	Acc: 0.8206	Infer_Time: 0.1844
+05/17 11:17:47 AM Epoch: 6	Mini-Batch: 0401/0482	Total_loss: 2.9956	CE_loss: 2.9863	Distil_loss: 0.0093	cosin_similar: 2.5625	Acc_1: 0.8055	Acc_2: 0.8130	Acc_3: 0.8279	Acc: 0.8254	Infer_Time: 0.1842
+05/17 11:18:02 AM train_acc 1.000000
+05/17 11:18:02 AM valid_acc 0.838174, best_acc 0.838174
+05/17 11:28:47 AM Epoch: 7	Mini-Batch: 0001/0482	Total_loss: 1.5894	CE_loss: 1.5794	Distil_loss: 0.0101	cosin_similar: 2.8420	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1766
+05/17 11:29:07 AM Epoch: 7	Mini-Batch: 0101/0482	Total_loss: 3.2181	CE_loss: 3.2119	Distil_loss: 0.0062	cosin_similar: 2.4547	Acc_1: 0.7525	Acc_2: 0.7228	Acc_3: 0.8218	Acc: 0.7525	Infer_Time: 0.1976
+05/17 11:29:26 AM Epoch: 7	Mini-Batch: 0201/0482	Total_loss: 2.9726	CE_loss: 2.9650	Distil_loss: 0.0075	cosin_similar: 2.5446	Acc_1: 0.7910	Acc_2: 0.7910	Acc_3: 0.8259	Acc: 0.8060	Infer_Time: 0.1903
+05/17 11:29:46 AM Epoch: 7	Mini-Batch: 0301/0482	Total_loss: 2.9096	CE_loss: 2.9013	Distil_loss: 0.0083	cosin_similar: 2.5866	Acc_1: 0.8040	Acc_2: 0.8106	Acc_3: 0.8372	Acc: 0.8173	Infer_Time: 0.1877
+05/17 11:30:05 AM Epoch: 7	Mini-Batch: 0401/0482	Total_loss: 2.8996	CE_loss: 2.8911	Distil_loss: 0.0085	cosin_similar: 2.5968	Acc_1: 0.8055	Acc_2: 0.8030	Acc_3: 0.8329	Acc: 0.8279	Infer_Time: 0.1868
+05/17 11:30:21 AM train_acc 1.000000
+05/17 11:30:21 AM valid_acc 0.844398, best_acc 0.844398
+--------------------------------------------
+Confusion Matrix
+--------------------------------------------
+Class 0 : 0
+Class 1 : 1
+Class 2 : 2
+Class 3 : 3
+Class 4 : 4
+Class 5 : 5
+Class 6 : 6
+Class 7 : 7
+Class 8 : 8
+Class 9 : 9
+Class 10 : 10
+Class 11 : 11
+Class 12 : 12
+Class 13 : 13
+Class 14 : 14
+Class 15 : 15
+Class 16 : 16
+Class 17 : 17
+Class 18 : 18
+Class 19 : 19
+Class 20 : 20
+Class 21 : 21
+Class 22 : 22
+Class 23 : 23
+Class 24 : 24
+================================================================================
+Accuracy Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 7 	 100.0 	 86.36 |
+| 15 	 100.0 	 76.0 |
+| 23 	 100.0 	 73.08 |
+| 19 	 95.24 	 90.91 |
+| 5 	 95.0 	 95.0 |
+| 22 	 95.0 	 100.0 |
+| 20 	 93.33 	 100.0 |
+| 16 	 90.0 	 64.29 |
+| 11 	 89.47 	 89.47 |
+| 24 	 88.89 	 100.0 |
+| 2 	 85.0 	 89.47 |
+| 10 	 85.0 	 77.27 |
+| 9 	 84.21 	 84.21 |
+| 12 	 83.33 	 60.0 |
+| 14 	 81.25 	 81.25 |
+| 6 	 80.0 	 88.89 |
+| 13 	 80.0 	 76.19 |
+| 17 	 78.95 	 100.0 |
+| 1 	 77.27 	 100.0 |
+| 4 	 75.0 	 88.24 |
+--------------------------------------------------------------------------------
+Precision Tok 20:
+| Class ID 	 Accuracy(%) 	 Precision(%) |
+| 1 	 77.27 	 100.0 |
+| 17 	 78.95 	 100.0 |
+| 20 	 93.33 	 100.0 |
+| 22 	 95.0 	 100.0 |
+| 24 	 88.89 	 100.0 |
+| 5 	 95.0 	 95.0 |
+| 0 	 72.22 	 92.86 |
+| 21 	 72.22 	 92.86 |
+| 19 	 95.24 	 90.91 |
+| 2 	 85.0 	 89.47 |
+| 11 	 89.47 	 89.47 |
+| 6 	 80.0 	 88.89 |
+| 4 	 75.0 	 88.24 |
+| 7 	 100.0 	 86.36 |
+| 9 	 84.21 	 84.21 |
+| 8 	 68.18 	 83.33 |
+| 14 	 81.25 	 81.25 |
+| 18 	 68.42 	 81.25 |
+| 10 	 85.0 	 77.27 |
+| 13 	 80.0 	 76.19 |
+================================================================================
+05/17 11:41:01 AM Epoch: 8	Mini-Batch: 0001/0482	Total_loss: 1.5819	CE_loss: 1.5720	Distil_loss: 0.0099	cosin_similar: 2.8993	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.5521
+05/17 11:41:21 AM Epoch: 8	Mini-Batch: 0101/0482	Total_loss: 3.2135	CE_loss: 3.2076	Distil_loss: 0.0059	cosin_similar: 2.5380	Acc_1: 0.7525	Acc_2: 0.7723	Acc_3: 0.8218	Acc: 0.7822	Infer_Time: 0.1985
+05/17 11:41:40 AM Epoch: 8	Mini-Batch: 0201/0482	Total_loss: 2.9936	CE_loss: 2.9866	Distil_loss: 0.0070	cosin_similar: 2.6085	Acc_1: 0.7861	Acc_2: 0.8159	Acc_3: 0.8308	Acc: 0.8109	Infer_Time: 0.1914
+05/17 11:42:00 AM Epoch: 8	Mini-Batch: 0301/0482	Total_loss: 2.9116	CE_loss: 2.9037	Distil_loss: 0.0079	cosin_similar: 2.6489	Acc_1: 0.8106	Acc_2: 0.8206	Acc_3: 0.8372	Acc: 0.8173	Infer_Time: 0.1898
+05/17 11:42:19 AM Epoch: 8	Mini-Batch: 0401/0482	Total_loss: 2.9291	CE_loss: 2.9211	Distil_loss: 0.0080	cosin_similar: 2.6577	Acc_1: 0.8055	Acc_2: 0.8180	Acc_3: 0.8304	Acc: 0.8180	Infer_Time: 0.1882
+05/17 11:42:34 AM train_acc 1.000000
+05/17 11:42:34 AM valid_acc 0.840249, best_acc 0.844398
+05/17 11:53:15 AM Epoch: 9	Mini-Batch: 0001/0482	Total_loss: 1.5917	CE_loss: 1.5822	Distil_loss: 0.0095	cosin_similar: 2.8722	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1506
+05/17 11:53:35 AM Epoch: 9	Mini-Batch: 0101/0482	Total_loss: 3.2811	CE_loss: 3.2756	Distil_loss: 0.0055	cosin_similar: 2.5380	Acc_1: 0.7327	Acc_2: 0.7525	Acc_3: 0.8416	Acc: 0.7426	Infer_Time: 0.1914
+05/17 11:53:54 AM Epoch: 9	Mini-Batch: 0201/0482	Total_loss: 3.0500	CE_loss: 3.0434	Distil_loss: 0.0066	cosin_similar: 2.6213	Acc_1: 0.7761	Acc_2: 0.7910	Acc_3: 0.8358	Acc: 0.7960	Infer_Time: 0.1875
+05/17 11:54:13 AM Epoch: 9	Mini-Batch: 0301/0482	Total_loss: 2.9260	CE_loss: 2.9184	Distil_loss: 0.0076	cosin_similar: 2.6740	Acc_1: 0.7907	Acc_2: 0.8106	Acc_3: 0.8439	Acc: 0.8073	Infer_Time: 0.1863
+05/17 11:54:33 AM Epoch: 9	Mini-Batch: 0401/0482	Total_loss: 2.9202	CE_loss: 2.9125	Distil_loss: 0.0076	cosin_similar: 2.6771	Acc_1: 0.7955	Acc_2: 0.8105	Acc_3: 0.8329	Acc: 0.8155	Infer_Time: 0.1859
+05/17 11:54:48 AM train_acc 1.000000
+05/17 11:54:48 AM valid_acc 0.844398, best_acc 0.844398
+05/17 12:05:29 PM Epoch: 10	Mini-Batch: 0001/0482	Total_loss: 1.5760	CE_loss: 1.5674	Distil_loss: 0.0086	cosin_similar: 2.8800	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.5471
+05/17 12:05:48 PM Epoch: 10	Mini-Batch: 0101/0482	Total_loss: 3.2458	CE_loss: 3.2405	Distil_loss: 0.0053	cosin_similar: 2.5388	Acc_1: 0.7327	Acc_2: 0.7327	Acc_3: 0.8218	Acc: 0.7426	Infer_Time: 0.1963
+05/17 12:06:08 PM Epoch: 10	Mini-Batch: 0201/0482	Total_loss: 2.9965	CE_loss: 2.9901	Distil_loss: 0.0063	cosin_similar: 2.6114	Acc_1: 0.7761	Acc_2: 0.7910	Acc_3: 0.8209	Acc: 0.7910	Infer_Time: 0.1909
+05/17 12:06:27 PM Epoch: 10	Mini-Batch: 0301/0482	Total_loss: 2.8945	CE_loss: 2.8873	Distil_loss: 0.0073	cosin_similar: 2.6560	Acc_1: 0.8007	Acc_2: 0.8106	Acc_3: 0.8339	Acc: 0.8140	Infer_Time: 0.1886
+05/17 12:06:46 PM Epoch: 10	Mini-Batch: 0401/0482	Total_loss: 2.8967	CE_loss: 2.8894	Distil_loss: 0.0073	cosin_similar: 2.6615	Acc_1: 0.8055	Acc_2: 0.8130	Acc_3: 0.8279	Acc: 0.8229	Infer_Time: 0.1873
+05/17 12:07:02 PM train_acc 1.000000
+05/17 12:07:02 PM valid_acc 0.834025, best_acc 0.844398
+05/17 12:17:44 PM Epoch: 11	Mini-Batch: 0001/0482	Total_loss: 1.5767	CE_loss: 1.5691	Distil_loss: 0.0076	cosin_similar: 2.8980	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.0534
+05/17 12:18:03 PM Epoch: 11	Mini-Batch: 0101/0482	Total_loss: 3.1648	CE_loss: 3.1599	Distil_loss: 0.0049	cosin_similar: 2.5676	Acc_1: 0.7525	Acc_2: 0.7525	Acc_3: 0.8317	Acc: 0.7822	Infer_Time: 0.1911
+05/17 12:18:22 PM Epoch: 11	Mini-Batch: 0201/0482	Total_loss: 2.9161	CE_loss: 2.9102	Distil_loss: 0.0060	cosin_similar: 2.6434	Acc_1: 0.7811	Acc_2: 0.8010	Acc_3: 0.8259	Acc: 0.8159	Infer_Time: 0.1874
+05/17 12:18:42 PM Epoch: 11	Mini-Batch: 0301/0482	Total_loss: 2.8766	CE_loss: 2.8698	Distil_loss: 0.0068	cosin_similar: 2.6830	Acc_1: 0.7973	Acc_2: 0.8106	Acc_3: 0.8339	Acc: 0.8272	Infer_Time: 0.1866
+05/17 12:19:01 PM Epoch: 11	Mini-Batch: 0401/0482	Total_loss: 2.8818	CE_loss: 2.8749	Distil_loss: 0.0069	cosin_similar: 2.6947	Acc_1: 0.8030	Acc_2: 0.8105	Acc_3: 0.8354	Acc: 0.8329	Infer_Time: 0.1862
+05/17 12:19:17 PM train_acc 1.000000
+05/17 12:19:17 PM valid_acc 0.842324, best_acc 0.844398
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)
+_tkinter.TclError: can't invoke "destroy" command: application has been destroyed
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 1892, in __call__
+    return self.func(*args)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 552, in destroy
+    Gcf.destroy(self)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/_pylab_helpers.py", line 66, in destroy
+    manager.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 587, in destroy
+    delayed_destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/matplotlib/backends/_backend_tk.py", line 577, in delayed_destroy
+    self.window.destroy()
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/tkinter/__init__.py", line 2312, in destroy
+    self.tk.call('destroy', self._w)

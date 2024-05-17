@@ -1,25 +1,25 @@
 common:
-  data: /media/ssd1/bjzhou/ssd2/bjzhou/Jester/20bn-jester-v1
-  splits: /media/ssd1/bjzhou/ssd2/bjzhou/Jester/dataset_splits
-
+  data: /home/user/datasets/jester/20bn-jester-v1
+  splits: /home/user/mj_ws/MotionRGBD
   #-------basic Hyparameter----------
-  visname: Jester
+  visdom:
+    enable: False
+    visname: Jester
   dataset: Jester
   batch_size: 2
   test_batch_size: 2
-  num_workers: 4
+  num_workers: 8
   learning_rate: 0.01
   learning_rate_min: 0.00001
   momentum: 0.9
   weight_decay: 0.0003
   init_epochs: 0
   epochs: 100
-  report_freq: 10
-  metric_freq: 10
+  report_freq: 500
   show_cluster_result: 100
   optim: SGD
   dist: True
-  vis_feature: True # Visualization?
+  vis_feature: False # Visualization?
 
   scheduler:
     name: cosin
@@ -31,14 +31,14 @@ common:
   mse_weight: 10.0
   MultiLoss: True
   loss_lamdb: [ 1, 0.5, 0.5, 0.5 ]
-  distill_lamdb: 1.
+  distill: 1.
 
 model:
   Network: I3DWTrans
-  pretrained: ''
+  pretrained: '/home/minjae/ws/MotionRGBD/Checkpoints/checkpoint.pth.tar'
   # resume: ''
   resumelr: False
-  sample_duration: 64
+  sample_duration: 30
   sample_size: 224
   grad_clip: 5.
   SYNC_BN: 1

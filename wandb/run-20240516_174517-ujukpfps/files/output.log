@@ -1,0 +1,31 @@
+Experiment dir : Checkpoints/I3DWTrans-NvGesture-M-20240516-174521
+05/16 05:45:21 PM gpu device = 0
+05/16 05:45:21 PM Model:I3DWTrans, Total Categories:25
+pretrained:  /home/minjae/ws/MotionRGBD/Checkpoints/model_best-Nv-M.pth.tar-v1
+Missing keys:
+ ['dtn.mlp_head_small.1.weight', 'dtn.mlp_head_small.1.bias', 'dtn.mlp_head_media.1.weight', 'dtn.mlp_head_media.1.bias', 'dtn.mlp_head_large.1.weight', 'dtn.mlp_head_large.1.bias']
+phase:  train
+learnig rate:  0.005
+05/16 05:45:22 PM Dataset:NvGesture, Modality:rgb
+05/16 05:45:22 PM Training Data Size is: 1050
+05/16 05:45:22 PM Average Train Data frames are: 80, max frames: 80, min frames: 80
+05/16 05:45:22 PM Dataset:NvGesture, Modality:rgb
+05/16 05:45:22 PM Validation Data Size is: 482
+05/16 05:45:22 PM Average Train Data frames are: 80, max frames: 80, min frames: 80
+Namespace(config='config/NvGesture_init.yml', eval_only=False, local_rank=0, nprocs=1, save_grid_image=False, save_output=False, demo_dir='./demo', resume='', distill_lamdb=0.0, drop_path_prob=0.5, save='Checkpoints/I3DWTrans-NvGesture-M-20240516-174521', seed=123, data='/home/minjae/ws/data/nvGesture/Video_data/rgb', splits='/home/minjae/ws/data/nvGesture/Video_data/rgb', visdom={'enable': False, 'visname': 'NvGesture'}, dataset='NvGesture', batch_size=1, test_batch_size=1, num_workers=4, learning_rate=0.005, learning_rate_min=1e-05, momentum=0.9, weight_decay=0.0003, init_epochs=0, epochs=100, report_freq=100, optim='SGD', dist=False, vis_feature=True, DEBUG=False, scheduler={'name': 'cosin', 'patience': 4, 'warm_up_epochs': 3}, loss={'name': 'CE', 'labelsmooth': True}, MultiLoss=True, loss_lamdb=[1, 0.5, 0.5, 0.5], distill=1.0, Network='I3DWTrans', pretrained='/home/minjae/ws/MotionRGBD/Checkpoints/model_best-Nv-M.pth.tar-v1', resumelr=True, sample_duration=64, sample_size=224, grad_clip=5.0, SYNC_BN=1, w=4, temper=0.4, recoupling=True, knn_attention=0.7, sharpness=True, temp=[0.04, 0.07], frp=True, SEHeads=1, N=6, type='M', flip=0.0, rotated=0.5, angle='(-10, 10)', Blur=False, resize='(256, 256)', crop_size=224, low_frames=16, media_frames=32, high_frames=48, num_classes=25, phase='valid')
+05/16 05:45:22 PM param size = 38.142957MB
+None
+remove Checkpoints/I3DWTrans-NvGesture-M-20240516-174521: Directory
+Traceback (most recent call last):
+  File "/home/minjae/ws/MotionRGBD/tools/train.py", line 500, in <module>
+    main(args.local_rank, args.nprocs, args)
+  File "/home/minjae/ws/MotionRGBD/tools/train.py", line 164, in main
+    train_acc, train_obj, meter_dict_train = train(train_queue, model, criterion, optimizer, epoch, local_rank)
+  File "/home/minjae/ws/MotionRGBD/tools/train.py", line 346, in train
+    globals()['CE_loss'] = lamd1*CE(logits, target) + lamd2*CE(xs, target) + lamd3*CE(xm, target) + lamd4*CE(xl, target)
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/minjae/ws/MotionRGBD/utils/build.py", line 37, in forward
+    nll = F.nll_loss(
+  File "/home/minjae/anaconda3/envs/gesture/lib/python3.9/site-packages/torch/nn/functional.py", line 2704, in nll_loss
+    return torch._C._nn.nll_loss_nd(input, target, weight, _Reduction.get_enum(reduction), ignore_index)

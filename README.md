@@ -262,3 +262,26 @@ The code is released under the MIT license.
 # Copyright
 Copyright (C) 2010-2021 Alibaba Group Holding Limited.
 # tmp_action_recog
+## Webcam
+
+```
+python3 tools/test.py --config config/Jester.yml --eval_only
+```
+
+### checkpoint
+- DTN.py - L332
+```
+if self._args.sharpness:
+  temp = self.temp_schedule[self._args.epoch]
+```
+args.epoch has to be specific value 50~99, i recommend 75
+
+- utils.py - L105
+```
+if name not in ['dtn.mlp_head_small.1.bias', "dtn.mlp_head_small.1.weight",
+          'dtn.mlp_head_media.1.bias', "dtn.mlp_head_media.1.weight",
+          'dtn.mlp_head_large.1.bias', "dtn.mlp_head_large.1.weight"]:
+    new_state_dict[name] = v
+```
+
+make sure your pretrained weight doesn't skip any layer

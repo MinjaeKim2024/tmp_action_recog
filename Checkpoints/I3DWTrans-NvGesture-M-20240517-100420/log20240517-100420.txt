@@ -1,0 +1,86 @@
+2024-05-17 10:04:20,474 gpu device = 0
+2024-05-17 10:04:20,474 Model:I3DWTrans, Total Categories:25
+2024-05-17 10:04:22,241 Dataset:NvGesture, Modality:rgb
+2024-05-17 10:04:22,244 Training Data Size is: 1050
+2024-05-17 10:04:22,244 Average Train Data frames are: 80, max frames: 80, min frames: 80
+2024-05-17 10:04:22,244 Dataset:NvGesture, Modality:rgb
+2024-05-17 10:04:22,244 Validation Data Size is: 482 
+2024-05-17 10:04:22,244 Average Train Data frames are: 80, max frames: 80, min frames: 80
+2024-05-17 10:04:22,248 param size = 38.142957MB
+2024-05-17 10:15:04,809 Epoch: 1	Mini-Batch: 0001/0482	Total_loss: 8.1451	CE_loss: 8.1451	Distil_loss: 0.0000	cosin_similar: 0.3382	Acc_1: 0.0000	Acc_2: 0.0000	Acc_3: 0.0000	Acc: 0.0000	Infer_Time: 0.5493
+2024-05-17 10:15:24,219 Epoch: 1	Mini-Batch: 0101/0482	Total_loss: 8.2190	CE_loss: 8.2190	Distil_loss: 0.0000	cosin_similar: 0.3513	Acc_1: 0.0099	Acc_2: 0.0099	Acc_3: 0.0198	Acc: 0.0198	Infer_Time: 0.1846
+2024-05-17 10:15:43,536 Epoch: 1	Mini-Batch: 0201/0482	Total_loss: 8.4880	CE_loss: 8.4880	Distil_loss: 0.0000	cosin_similar: 0.3008	Acc_1: 0.0100	Acc_2: 0.0100	Acc_3: 0.0149	Acc: 0.0100	Infer_Time: 0.1839
+2024-05-17 10:16:02,716 Epoch: 1	Mini-Batch: 0301/0482	Total_loss: 8.5155	CE_loss: 8.5155	Distil_loss: 0.0000	cosin_similar: 0.3463	Acc_1: 0.0299	Acc_2: 0.0465	Acc_3: 0.0133	Acc: 0.0133	Infer_Time: 0.1836
+2024-05-17 10:16:22,165 Epoch: 1	Mini-Batch: 0401/0482	Total_loss: 8.7260	CE_loss: 8.7260	Distil_loss: 0.0000	cosin_similar: 0.3357	Acc_1: 0.0274	Acc_2: 0.0349	Acc_3: 0.0100	Acc: 0.0100	Infer_Time: 0.1840
+2024-05-17 10:16:37,592 train_acc 0.023810
+2024-05-17 10:16:37,592 valid_acc 0.058091, best_acc 0.058091
+2024-05-17 10:27:18,279 Epoch: 2	Mini-Batch: 0001/0482	Total_loss: 1.6446	CE_loss: 1.6446	Distil_loss: 0.0000	cosin_similar: 2.3365	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.4856
+2024-05-17 10:27:38,222 Epoch: 2	Mini-Batch: 0101/0482	Total_loss: 3.7788	CE_loss: 3.7788	Distil_loss: 0.0000	cosin_similar: 1.9143	Acc_1: 0.7525	Acc_2: 0.7030	Acc_3: 0.7426	Acc: 0.7327	Infer_Time: 0.2031
+2024-05-17 10:27:58,191 Epoch: 2	Mini-Batch: 0201/0482	Total_loss: 3.4261	CE_loss: 3.4261	Distil_loss: 0.0000	cosin_similar: 1.9317	Acc_1: 0.7811	Acc_2: 0.7711	Acc_3: 0.7413	Acc: 0.7811	Infer_Time: 0.1964
+2024-05-17 10:28:17,991 Epoch: 2	Mini-Batch: 0301/0482	Total_loss: 3.2453	CE_loss: 3.2453	Distil_loss: 0.0000	cosin_similar: 1.9935	Acc_1: 0.8040	Acc_2: 0.7940	Acc_3: 0.7841	Acc: 0.8073	Infer_Time: 0.1940
+2024-05-17 10:28:38,210 Epoch: 2	Mini-Batch: 0401/0482	Total_loss: 3.2361	CE_loss: 3.2361	Distil_loss: 0.0000	cosin_similar: 2.0049	Acc_1: 0.8055	Acc_2: 0.7855	Acc_3: 0.7805	Acc: 0.8080	Infer_Time: 0.1939
+2024-05-17 10:28:54,489 train_acc 0.946667
+2024-05-17 10:28:54,490 valid_acc 0.825726, best_acc 0.825726
+2024-05-17 10:39:41,296 Epoch: 3	Mini-Batch: 0001/0482	Total_loss: 1.6508	CE_loss: 1.6420	Distil_loss: 0.0088	cosin_similar: 1.8318	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.2148
+2024-05-17 10:40:00,433 Epoch: 3	Mini-Batch: 0101/0482	Total_loss: 3.7620	CE_loss: 3.7548	Distil_loss: 0.0071	cosin_similar: 1.6630	Acc_1: 0.6931	Acc_2: 0.7129	Acc_3: 0.7525	Acc: 0.7228	Infer_Time: 0.1922
+2024-05-17 10:40:19,849 Epoch: 3	Mini-Batch: 0201/0482	Total_loss: 3.2447	CE_loss: 3.2361	Distil_loss: 0.0086	cosin_similar: 1.7297	Acc_1: 0.7463	Acc_2: 0.7811	Acc_3: 0.8010	Acc: 0.7910	Infer_Time: 0.1881
+2024-05-17 10:40:39,182 Epoch: 3	Mini-Batch: 0301/0482	Total_loss: 3.1045	CE_loss: 3.0952	Distil_loss: 0.0093	cosin_similar: 1.7501	Acc_1: 0.7841	Acc_2: 0.8106	Acc_3: 0.8106	Acc: 0.8140	Infer_Time: 0.1868
+2024-05-17 10:40:58,931 Epoch: 3	Mini-Batch: 0401/0482	Total_loss: 3.1345	CE_loss: 3.1247	Distil_loss: 0.0098	cosin_similar: 1.7811	Acc_1: 0.7905	Acc_2: 0.8105	Acc_3: 0.8105	Acc: 0.8155	Infer_Time: 0.1872
+2024-05-17 10:41:14,610 train_acc 0.996190
+2024-05-17 10:41:14,610 valid_acc 0.829876, best_acc 0.829876
+2024-05-17 10:51:57,800 Epoch: 4	Mini-Batch: 0001/0482	Total_loss: 1.6150	CE_loss: 1.6030	Distil_loss: 0.0120	cosin_similar: 2.7622	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1538
+2024-05-17 10:52:16,968 Epoch: 4	Mini-Batch: 0101/0482	Total_loss: 3.1188	CE_loss: 3.1114	Distil_loss: 0.0074	cosin_similar: 2.3621	Acc_1: 0.7624	Acc_2: 0.7624	Acc_3: 0.8020	Acc: 0.7921	Infer_Time: 0.1909
+2024-05-17 10:52:36,129 Epoch: 4	Mini-Batch: 0201/0482	Total_loss: 3.0268	CE_loss: 3.0183	Distil_loss: 0.0085	cosin_similar: 2.4372	Acc_1: 0.7960	Acc_2: 0.7811	Acc_3: 0.8010	Acc: 0.8209	Infer_Time: 0.1868
+2024-05-17 10:52:55,490 Epoch: 4	Mini-Batch: 0301/0482	Total_loss: 2.9535	CE_loss: 2.9440	Distil_loss: 0.0095	cosin_similar: 2.4823	Acc_1: 0.8106	Acc_2: 0.8007	Acc_3: 0.8173	Acc: 0.8339	Infer_Time: 0.1860
+2024-05-17 10:53:15,239 Epoch: 4	Mini-Batch: 0401/0482	Total_loss: 2.9909	CE_loss: 2.9813	Distil_loss: 0.0096	cosin_similar: 2.4666	Acc_1: 0.8005	Acc_2: 0.7855	Acc_3: 0.8180	Acc: 0.8254	Infer_Time: 0.1865
+2024-05-17 10:53:30,831 train_acc 0.998095
+2024-05-17 10:53:30,831 valid_acc 0.838174, best_acc 0.838174
+2024-05-17 11:04:14,716 Epoch: 5	Mini-Batch: 0001/0482	Total_loss: 1.5968	CE_loss: 1.5851	Distil_loss: 0.0117	cosin_similar: 2.7082	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1891
+2024-05-17 11:04:33,902 Epoch: 5	Mini-Batch: 0101/0482	Total_loss: 3.4281	CE_loss: 3.4211	Distil_loss: 0.0070	cosin_similar: 2.4140	Acc_1: 0.7525	Acc_2: 0.7426	Acc_3: 0.7624	Acc: 0.7822	Infer_Time: 0.1921
+2024-05-17 11:04:53,145 Epoch: 5	Mini-Batch: 0201/0482	Total_loss: 3.1049	CE_loss: 3.0966	Distil_loss: 0.0083	cosin_similar: 2.5009	Acc_1: 0.7711	Acc_2: 0.7811	Acc_3: 0.7811	Acc: 0.8010	Infer_Time: 0.1873
+2024-05-17 11:05:12,404 Epoch: 5	Mini-Batch: 0301/0482	Total_loss: 2.9886	CE_loss: 2.9795	Distil_loss: 0.0092	cosin_similar: 2.5461	Acc_1: 0.7940	Acc_2: 0.8073	Acc_3: 0.8106	Acc: 0.8206	Infer_Time: 0.1862
+2024-05-17 11:05:31,709 Epoch: 5	Mini-Batch: 0401/0482	Total_loss: 2.9702	CE_loss: 2.9609	Distil_loss: 0.0093	cosin_similar: 2.5598	Acc_1: 0.7980	Acc_2: 0.8105	Acc_3: 0.8155	Acc: 0.8204	Infer_Time: 0.1856
+2024-05-17 11:05:47,425 train_acc 1.000000
+2024-05-17 11:05:47,426 valid_acc 0.834025, best_acc 0.838174
+2024-05-17 11:16:29,941 Epoch: 6	Mini-Batch: 0001/0482	Total_loss: 1.6643	CE_loss: 1.6531	Distil_loss: 0.0112	cosin_similar: 2.7531	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 0.3027
+2024-05-17 11:16:49,099 Epoch: 6	Mini-Batch: 0101/0482	Total_loss: 3.3951	CE_loss: 3.3884	Distil_loss: 0.0067	cosin_similar: 2.3932	Acc_1: 0.7426	Acc_2: 0.7525	Acc_3: 0.8218	Acc: 0.7525	Infer_Time: 0.1834
+2024-05-17 11:17:08,445 Epoch: 6	Mini-Batch: 0201/0482	Total_loss: 3.1372	CE_loss: 3.1292	Distil_loss: 0.0080	cosin_similar: 2.4935	Acc_1: 0.7761	Acc_2: 0.7910	Acc_3: 0.8159	Acc: 0.8010	Infer_Time: 0.1834
+2024-05-17 11:17:27,952 Epoch: 6	Mini-Batch: 0301/0482	Total_loss: 3.0010	CE_loss: 2.9920	Distil_loss: 0.0090	cosin_similar: 2.5470	Acc_1: 0.8007	Acc_2: 0.8173	Acc_3: 0.8372	Acc: 0.8206	Infer_Time: 0.1844
+2024-05-17 11:17:47,237 Epoch: 6	Mini-Batch: 0401/0482	Total_loss: 2.9956	CE_loss: 2.9863	Distil_loss: 0.0093	cosin_similar: 2.5625	Acc_1: 0.8055	Acc_2: 0.8130	Acc_3: 0.8279	Acc: 0.8254	Infer_Time: 0.1842
+2024-05-17 11:18:02,988 train_acc 1.000000
+2024-05-17 11:18:02,989 valid_acc 0.838174, best_acc 0.838174
+2024-05-17 11:28:47,879 Epoch: 7	Mini-Batch: 0001/0482	Total_loss: 1.5894	CE_loss: 1.5794	Distil_loss: 0.0101	cosin_similar: 2.8420	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1766
+2024-05-17 11:29:07,572 Epoch: 7	Mini-Batch: 0101/0482	Total_loss: 3.2181	CE_loss: 3.2119	Distil_loss: 0.0062	cosin_similar: 2.4547	Acc_1: 0.7525	Acc_2: 0.7228	Acc_3: 0.8218	Acc: 0.7525	Infer_Time: 0.1976
+2024-05-17 11:29:26,919 Epoch: 7	Mini-Batch: 0201/0482	Total_loss: 2.9726	CE_loss: 2.9650	Distil_loss: 0.0075	cosin_similar: 2.5446	Acc_1: 0.7910	Acc_2: 0.7910	Acc_3: 0.8259	Acc: 0.8060	Infer_Time: 0.1903
+2024-05-17 11:29:46,049 Epoch: 7	Mini-Batch: 0301/0482	Total_loss: 2.9096	CE_loss: 2.9013	Distil_loss: 0.0083	cosin_similar: 2.5866	Acc_1: 0.8040	Acc_2: 0.8106	Acc_3: 0.8372	Acc: 0.8173	Infer_Time: 0.1877
+2024-05-17 11:30:05,355 Epoch: 7	Mini-Batch: 0401/0482	Total_loss: 2.8996	CE_loss: 2.8911	Distil_loss: 0.0085	cosin_similar: 2.5968	Acc_1: 0.8055	Acc_2: 0.8030	Acc_3: 0.8329	Acc: 0.8279	Infer_Time: 0.1868
+2024-05-17 11:30:21,032 train_acc 1.000000
+2024-05-17 11:30:21,033 valid_acc 0.844398, best_acc 0.844398
+2024-05-17 11:41:01,581 Epoch: 8	Mini-Batch: 0001/0482	Total_loss: 1.5819	CE_loss: 1.5720	Distil_loss: 0.0099	cosin_similar: 2.8993	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.5521
+2024-05-17 11:41:21,143 Epoch: 8	Mini-Batch: 0101/0482	Total_loss: 3.2135	CE_loss: 3.2076	Distil_loss: 0.0059	cosin_similar: 2.5380	Acc_1: 0.7525	Acc_2: 0.7723	Acc_3: 0.8218	Acc: 0.7822	Infer_Time: 0.1985
+2024-05-17 11:41:40,439 Epoch: 8	Mini-Batch: 0201/0482	Total_loss: 2.9936	CE_loss: 2.9866	Distil_loss: 0.0070	cosin_similar: 2.6085	Acc_1: 0.7861	Acc_2: 0.8159	Acc_3: 0.8308	Acc: 0.8109	Infer_Time: 0.1914
+2024-05-17 11:42:00,013 Epoch: 8	Mini-Batch: 0301/0482	Total_loss: 2.9116	CE_loss: 2.9037	Distil_loss: 0.0079	cosin_similar: 2.6489	Acc_1: 0.8106	Acc_2: 0.8206	Acc_3: 0.8372	Acc: 0.8173	Infer_Time: 0.1898
+2024-05-17 11:42:19,369 Epoch: 8	Mini-Batch: 0401/0482	Total_loss: 2.9291	CE_loss: 2.9211	Distil_loss: 0.0080	cosin_similar: 2.6577	Acc_1: 0.8055	Acc_2: 0.8180	Acc_3: 0.8304	Acc: 0.8180	Infer_Time: 0.1882
+2024-05-17 11:42:34,991 train_acc 1.000000
+2024-05-17 11:42:34,991 valid_acc 0.840249, best_acc 0.844398
+2024-05-17 11:53:15,912 Epoch: 9	Mini-Batch: 0001/0482	Total_loss: 1.5917	CE_loss: 1.5822	Distil_loss: 0.0095	cosin_similar: 2.8722	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.1506
+2024-05-17 11:53:35,046 Epoch: 9	Mini-Batch: 0101/0482	Total_loss: 3.2811	CE_loss: 3.2756	Distil_loss: 0.0055	cosin_similar: 2.5380	Acc_1: 0.7327	Acc_2: 0.7525	Acc_3: 0.8416	Acc: 0.7426	Infer_Time: 0.1914
+2024-05-17 11:53:54,314 Epoch: 9	Mini-Batch: 0201/0482	Total_loss: 3.0500	CE_loss: 3.0434	Distil_loss: 0.0066	cosin_similar: 2.6213	Acc_1: 0.7761	Acc_2: 0.7910	Acc_3: 0.8358	Acc: 0.7960	Infer_Time: 0.1875
+2024-05-17 11:54:13,625 Epoch: 9	Mini-Batch: 0301/0482	Total_loss: 2.9260	CE_loss: 2.9184	Distil_loss: 0.0076	cosin_similar: 2.6740	Acc_1: 0.7907	Acc_2: 0.8106	Acc_3: 0.8439	Acc: 0.8073	Infer_Time: 0.1863
+2024-05-17 11:54:33,148 Epoch: 9	Mini-Batch: 0401/0482	Total_loss: 2.9202	CE_loss: 2.9125	Distil_loss: 0.0076	cosin_similar: 2.6771	Acc_1: 0.7955	Acc_2: 0.8105	Acc_3: 0.8329	Acc: 0.8155	Infer_Time: 0.1859
+2024-05-17 11:54:48,885 train_acc 1.000000
+2024-05-17 11:54:48,885 valid_acc 0.844398, best_acc 0.844398
+2024-05-17 12:05:29,509 Epoch: 10	Mini-Batch: 0001/0482	Total_loss: 1.5760	CE_loss: 1.5674	Distil_loss: 0.0086	cosin_similar: 2.8800	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.5471
+2024-05-17 12:05:48,709 Epoch: 10	Mini-Batch: 0101/0482	Total_loss: 3.2458	CE_loss: 3.2405	Distil_loss: 0.0053	cosin_similar: 2.5388	Acc_1: 0.7327	Acc_2: 0.7327	Acc_3: 0.8218	Acc: 0.7426	Infer_Time: 0.1963
+2024-05-17 12:06:08,128 Epoch: 10	Mini-Batch: 0201/0482	Total_loss: 2.9965	CE_loss: 2.9901	Distil_loss: 0.0063	cosin_similar: 2.6114	Acc_1: 0.7761	Acc_2: 0.7910	Acc_3: 0.8209	Acc: 0.7910	Infer_Time: 0.1909
+2024-05-17 12:06:27,606 Epoch: 10	Mini-Batch: 0301/0482	Total_loss: 2.8945	CE_loss: 2.8873	Distil_loss: 0.0073	cosin_similar: 2.6560	Acc_1: 0.8007	Acc_2: 0.8106	Acc_3: 0.8339	Acc: 0.8140	Infer_Time: 0.1886
+2024-05-17 12:06:46,871 Epoch: 10	Mini-Batch: 0401/0482	Total_loss: 2.8967	CE_loss: 2.8894	Distil_loss: 0.0073	cosin_similar: 2.6615	Acc_1: 0.8055	Acc_2: 0.8130	Acc_3: 0.8279	Acc: 0.8229	Infer_Time: 0.1873
+2024-05-17 12:07:02,419 train_acc 1.000000
+2024-05-17 12:07:02,419 valid_acc 0.834025, best_acc 0.844398
+2024-05-17 12:17:44,537 Epoch: 11	Mini-Batch: 0001/0482	Total_loss: 1.5767	CE_loss: 1.5691	Distil_loss: 0.0076	cosin_similar: 2.8980	Acc_1: 1.0000	Acc_2: 1.0000	Acc_3: 1.0000	Acc: 1.0000	Infer_Time: 1.0534
+2024-05-17 12:18:03,738 Epoch: 11	Mini-Batch: 0101/0482	Total_loss: 3.1648	CE_loss: 3.1599	Distil_loss: 0.0049	cosin_similar: 2.5676	Acc_1: 0.7525	Acc_2: 0.7525	Acc_3: 0.8317	Acc: 0.7822	Infer_Time: 0.1911
+2024-05-17 12:18:22,995 Epoch: 11	Mini-Batch: 0201/0482	Total_loss: 2.9161	CE_loss: 2.9102	Distil_loss: 0.0060	cosin_similar: 2.6434	Acc_1: 0.7811	Acc_2: 0.8010	Acc_3: 0.8259	Acc: 0.8159	Infer_Time: 0.1874
+2024-05-17 12:18:42,558 Epoch: 11	Mini-Batch: 0301/0482	Total_loss: 2.8766	CE_loss: 2.8698	Distil_loss: 0.0068	cosin_similar: 2.6830	Acc_1: 0.7973	Acc_2: 0.8106	Acc_3: 0.8339	Acc: 0.8272	Infer_Time: 0.1866
+2024-05-17 12:19:01,978 Epoch: 11	Mini-Batch: 0401/0482	Total_loss: 2.8818	CE_loss: 2.8749	Distil_loss: 0.0069	cosin_similar: 2.6947	Acc_1: 0.8030	Acc_2: 0.8105	Acc_3: 0.8354	Acc: 0.8329	Infer_Time: 0.1862
+2024-05-17 12:19:17,453 train_acc 1.000000
+2024-05-17 12:19:17,453 valid_acc 0.842324, best_acc 0.844398

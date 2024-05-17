@@ -1,0 +1,3 @@
+usage: train.py [-h] [--config CONFIG] [--eval_only] [--local_rank LOCAL_RANK] [--nprocs NPROCS] [--save_grid_image] [--save_output] [--demo_dir DEMO_DIR] [--resume RESUME] [--distill-lamdb DISTILL_LAMDB]
+                [--drop_path_prob DROP_PATH_PROB] [--save SAVE] [--seed SEED]
+train.py: error: unrecognized arguments: --local-rank=0

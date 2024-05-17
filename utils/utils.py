@@ -102,14 +102,18 @@ def load_pretrained_checkpoint(model, model_path, phase='train'):
         name = k[7:] if k[:7] == 'module.' else k
         try:
             if v.shape == model.state_dict()[name].shape:
-              if name not in ['dtn.mlp_head_small.1.bias', "dtn.mlp_head_small.1.weight",
-                        'dtn.mlp_head_media.1.bias', "dtn.mlp_head_media.1.weight",
-                        'dtn.mlp_head_large.1.bias', "dtn.mlp_head_large.1.weight"]:
-                  new_state_dict[name] = v
+              if phase == "train":
+                if name not in ['dtn.mlp_head_small.1.bias', "dtn.mlp_head_small.1.weight",
+                          'dtn.mlp_head_media.1.bias', "dtn.mlp_head_media.1.weight",
+                          'dtn.mlp_head_large.1.bias', "dtn.mlp_head_large.1.weight"]:
+                    new_state_dict[name] = v
+              else:
+                new_state_dict[name] = v
         except:
             continue
     ret = model.load_state_dict(new_state_dict, strict=False)
     print('Missing keys: \n', ret.missing_keys)
+    print("phase: ", phase)
     return model
 
 def drop_path(x, drop_prob):

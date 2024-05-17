@@ -1,0 +1,154 @@
+{
+    "os": "Linux-6.5.0-28-generic-x86_64-with-glibc2.35",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-05-17T01:04:16.752010",
+    "startedAt": "2024-05-17T01:04:14.586612",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--local-rank=0",
+        "--config",
+        "config/NvGesture_init.yml",
+        "--nprocs",
+        "1"
+    ],
+    "state": "running",
+    "program": "/home/minjae/ws/MotionRGBD/tools/train.py",
+    "codePathLocal": "tools/train.py",
+    "codePath": "tools/train.py",
+    "git": {
+        "remote": "https://github.com/MinjaeKim2024/tmp_action_recog.git",
+        "commit": "df700dc51919f8b8754b40c5b611090d8f31942d"
+    },
+    "email": "dylankim@rgarobot.com",
+    "root": "/home/minjae/ws/MotionRGBD",
+    "host": "minjae-Vivobook-ASUSLaptop-K3605VV-K3605VV",
+    "username": "minjae",
+    "executable": "/home/minjae/anaconda3/envs/gesture/bin/python",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2316.3298,
+        "min": 400.0,
+        "max": 4400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4666.035,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2979.491,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4993.157,
+            "min": 400.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4662.961,
+            "min": 400.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4366.823,
+            "min": 400.0,
+            "max": 5000.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4499.741,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4231.126,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4198.954,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2562.256,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3692.781,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 1551.905,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3512.785,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3700.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 375.7898597717285,
+            "used": 177.8670768737793
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+            "memory_total": 8585740288
+        }
+    ],
+    "memory": {
+        "total": 15.23904037475586
+    }
+}
