@@ -113,7 +113,12 @@ class DSNNet(nn.Module):
             # nn.Dropout(dropout_spatial)
         )
         self.phase = phase
-        from .new_DTN import DTNNet
+        if args.frame == 30:
+            print("30 Frame New DTn is imported")
+            from .new_DTN30 import DTNNet
+        else: 
+            print("64 Frame New DTn is imported")
+            from .new_DTN import DTNNet
             
         self.avg_pool = nn.AvgPool3d(kernel_size=(1, 7, 7), stride=(1, 1, 1))
         self.dropout = nn.Dropout(dropout_keep_prob)
@@ -122,7 +127,13 @@ class DSNNet(nn.Module):
         self.rrange = Rearrange('b c t h w -> b t c h w')
 
         if args.frp:
-            self.frp_module = FRP_Module(w=args.w, inplanes=64)
+            if args.frame == 30:
+                from .FRP30 import FRP_Module
+                self.frp_module = FRP_Module(w=args.w, inplanes=64)
+
+            else:
+                from .FRP import FRP_Module
+                self.frp_module = FRP_Module(w=args.w, inplanes=64)
 
         if pretrained:
             load_pretrained_checkpoint(self, pretrained, self.phase)

@@ -36,7 +36,7 @@ common:
   distill: 1.
 model:
   Network: I3DWTrans # e.g., I3DWTrans or FusionNet
-  pretrained: /home/minjae/ws/MotionRGBD/Checkpoints/model_best-Nv-M.pth.tar-v1
+  pretrained: False
   resumelr: True
   sample_duration: 64
   sample_size: 224

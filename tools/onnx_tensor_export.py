@@ -13,8 +13,8 @@ def export_onnx(model, device, file, opset):
     import onnx
     
     f = "model.onnx"
-    im = torch.empty(1, 3, 30, 224, 224).to(device)
-    heatmap = torch.empty(1, 1, 30, 224, 224).to(device)
+    im = torch.empty(1, 3, 64, 224, 224).to(device)
+    heatmap = torch.empty(1, 1, 64, 224, 224).to(device)
     torch.onnx.export(
         model,  # --dynamic only compatible with cpu
         (im, heatmap),
@@ -172,11 +172,14 @@ if __name__ == "__main__":
     
 
     device = torch.device("cuda:0")
-
+    if "Jester" in args.config:
+        num_classes = 27
+    else:
+        num_classes = 25
  
-    model = DSNNet(args, num_classes=27, pretrained=args.weights, phase = "valid")
+    model = DSNNet(args, num_classes = num_classes, pretrained=args.weights, phase = "valid")
     model.to(device)
     model.eval()
     weight_path = "model.onnx"
-    # export_onnx(model, device,  args.weights, 12)  # opset 12
-    export_engine2(model, weight_path, device)
+    export_onnx(model, device,  args.weights, 12)  # opset 12
+    # export_engine2(model, weight_path, device)

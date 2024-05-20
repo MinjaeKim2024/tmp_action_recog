@@ -64,14 +64,28 @@ def accuracy(output, target, topk=(1,)):
 
 def calculate_accuracy(outputs, targets):
     with torch.no_grad():
+        print(outputs.shape, targets.shape)
         batch_size = targets.size(0) # get the size of the batch
         _, pred = outputs.topk(1, 1, True) # get the index of the class with the highest probability
+        print(pred.shape)
         pred = pred.t() # transpose
+        print(pred.shape)
         correct = pred.eq(targets.view(1, -1)) # compare the predicted label with the true label
         correct_k = correct.view(-1).float().sum(0, keepdim=True) # get the number of correct predictions
+        print("correct_k: ",correct_k)
+        print("batch_size: ",batch_size)
+    print(correct_k.mul_(1.0 / batch_size))
 
     return correct_k.mul_(1.0 / batch_size)
 
+def calculate_accuracy2(outputs, targets):
+    ans = torch.tensor(np.argmax(outputs, axis=1)).to(targets.device)
+    # target is torch.tensrt[1]
+    if ans == targets:
+        return torch.tensor([1.0]).to(targets.device)
+    else:
+        return torch.tensor([0.0]).to(targets.device)
+  
 def count_parameters_in_MB(model):
   return np.sum(np.prod(v.size()) for name, v in model.named_parameters() if "auxiliary" not in name)/1e6
 
@@ -97,7 +111,6 @@ def load_pretrained_checkpoint(model, model_path, phase='train'):
     # params = torch.load(model_path, map_location=lambda storage, loc: storage.cuda(local_rank))['model']
     params = torch.load(model_path, map_location='cpu')['model']
     new_state_dict = OrderedDict()
-
     for k, v in params.items():
         name = k[7:] if k[:7] == 'module.' else k
         try:
